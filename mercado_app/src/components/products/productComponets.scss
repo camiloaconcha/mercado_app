@@ -1,0 +1,45 @@
+@import "./../../sass/colors.scss";
+
+
+.listItem{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 10px;
+    padding: 10px 0 10px;
+    img{
+        width: 15%;
+        height: 15%;
+    }
+    
+    &_details{ 
+        width: 60%;
+        text-align: left;
+        &-price{
+            font-weight: 500;
+            margin-top: 5px;
+            font-size: 18px;
+        }
+    }
+
+    &_location{
+        width: 10%;
+        padding-top: 30px;
+        text-align: left;
+        font-size: 12px;
+        color:$mid-grey;
+        
+    }
+}
+
+.listItem::after{
+    background-color: #efefef; 
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,0);
+    width: 95%;
+ }

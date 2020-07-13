@@ -1,0 +1,12 @@
+@import "./../../sass/colors.scss";
+
+.productsList{ 
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    width: 60%;
+    height: auto;
+    text-align: center;
+    margin: auto;    
+    margin-top: 40px;    
+}
