@@ -1,0 +1,14 @@
+@import "./../../sass/colors.scss";
+
+.header {
+  &_container {
+    background-color: $primaryColor;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
