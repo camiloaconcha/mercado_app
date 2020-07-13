@@ -1,12 +1,91 @@
 @import "./../../sass/colors.scss";
 
-.productsList{ 
+.productsList {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  width: 60%;
+  height: auto;
+  text-align: center;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.detail {
+  width: 60%;
+
+  background-color: $white;
+  height: auto;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.productDescription {
+  padding: 20px;
+  text-align: left;
+  max-width: 70%;
+
+  &_text {
+    text-align: justify;
+    color: $mid-grey;
+    font-size: 12px;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.2;
+  }
+  &_title {
+    font-weight: 500;
+    font-size: 18px;
+    color: $dark-grey;
+  }
+}
+
+.productDetails {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-top: 20px;
+
+  &_image {
+    width: 65%;
+    text-align: left;
+    padding-left: 10%;
+    img {
+      height: 400px;
+      width: 400px;
+    }
+  }
+
+  &_data {
+    text-align: left;
     display: flex;
     flex-direction: column;
-    background-color: $white;
-    width: 60%;
-    height: auto;
-    text-align: center;
-    margin: auto;    
-    margin-top: 40px;    
+    line-height: 2.2;
+    width: auto;
+    &-status {
+      color: $mid-grey;
+      font-size: 12px;
+    }
+    &-name {
+      font-weight: 500;
+      font-size: 18px;
+      max-width: 80%;
+    }
+    &-price {
+      font-size: 30px;
+      font-weight: 500;
+    }
+    &-buy {
+      background-color: $blue;
+      border: none;
+      color: $white;
+      font-size: 18px;
+      height: 40px;
+      border-radius: 5px;
+      margin-top: 10%;
+      width: 80%;
+    }
+  }
 }
