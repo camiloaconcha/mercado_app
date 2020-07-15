@@ -18,7 +18,7 @@ const Search = (props) => {
       state: { fromDashboard: true },
       search: `?q=${searchTerm}`,
     };
-    props.history.push(location);
+    window.location.replace(location.pathname + location.search);
   };
 
   return (
