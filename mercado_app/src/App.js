@@ -1,27 +1,30 @@
 import React from "react";
-import "./App.scss";
-import Header from "./containers/header/header";
-import ProductList from "./containers/products/productList";
-import ProductDetail from "./containers/products/productDetail";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-const NoMatchRoute = () => <div>404 NOT FOUND</div>;
+import "./App.scss";
+import Search from "./containers/search/Search";
+import ProductList from "./containers/products/productList";
+import ProductDetail from "./containers/products/productDetail";
 
-function App() {
+const NotFound = () => <div>404 NOT FOUND</div>;
+
+const App = () => {
   return (
     <Router>
       <div className="App">
-        <Header title="mercadolibre"></Header>
         <Switch>
+          <Route path="/">
+            <Search />
+          </Route>
           <Route path="/items">
             <ProductList />
           </Route>
           <Route path="/item/:id" exact component={ProductDetail} />
-          <Route component={NoMatchRoute} />
-         </Switch>
+          <Route component={NotFound} />
+        </Switch>
       </div>
     </Router>
   );
-}
+};
 
 export default App;

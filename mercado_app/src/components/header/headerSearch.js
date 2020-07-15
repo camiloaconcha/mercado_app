@@ -2,13 +2,32 @@ import * as React from "react";
 import "./headerComponents.scss";
 import * as searchIcon from "./../../assets/ic_Search.png";
 
-const HeaderSearch = (props) => (
-  <form  className="headerCp_search">
-    <input type="text" placeholder="Nunca pares de buscar" />
+const HeaderSearch = ({
+  onSubmitHandler,
+  searchTerm,
+  onInputChange,
+  error,
+}) => (
+  <form className="headerCp_search" onSubmit={onSubmitHandler}>
+    <input
+      type="text"
+      placeholder="Nunca pares de buscar"
+      value={searchTerm}
+      onChange={onInputChange}
+      required
+    />
     <button type="submit">
       <img src={searchIcon} />
     </button>
-  </form >
+
+
+    {error && (
+        <div style={{ color: `red` }}>
+          Backend Error!
+        </div>
+      )}
+
+  </form>
 );
 
 export default HeaderSearch;
