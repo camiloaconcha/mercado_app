@@ -43,6 +43,7 @@ const mapItems = (results) => {
             condition: item.condition,
             free_shipping: item.shipping.free_shipping,
             sold_quantity: item.sold_quantity,
+            address: item.seller_address.city.name,
         };
     });
 
@@ -104,5 +105,5 @@ exports.searchById = (req, res) => {
         }
     };
 
-    getData(url);
+    getData(urlItems);
 };

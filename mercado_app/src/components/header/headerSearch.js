@@ -16,17 +16,12 @@ const HeaderSearch = ({
       onChange={onInputChange}
       required
     />
-    <button type="submit">
-      <img src={searchIcon} />
+
+    <button type="submit" className="headerCp_button">
+      <img src={searchIcon} alt="search icon" />
     </button>
 
-
-    {error && (
-        <div style={{ color: `red` }}>
-          Backend Error!
-        </div>
-      )}
-
+    {error && <div style={{ color: `red` }}>Backend Error!</div>}
   </form>
 );
 

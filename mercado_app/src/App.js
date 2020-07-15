@@ -1,29 +1,22 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import "./App.scss";
 import Search from "./containers/search/Search";
+import Detail from "./containers/products/detail";
 import ProductList from "./containers/products/productList";
-import ProductDetail from "./containers/products/productDetail";
-
-const NotFound = () => <div>404 NOT FOUND</div>;
+import "./App.scss";
 
 const App = () => {
   return (
-    <Router>
-      <div className="App">
+    <>
+      <Router>
+        <Route component={Search}></Route>
+        <Route path="/items" exact component={ProductList} />
         <Switch>
-          <Route path="/">
-            <Search />
-          </Route>
-          <Route path="/items">
-            <ProductList />
-          </Route>
-          <Route path="/item/:id" exact component={ProductDetail} />
-          <Route component={NotFound} />
+          <Route path="/item/:itemId" exact component={Detail} />
         </Switch>
-      </div>
-    </Router>
+      </Router>
+    </>
   );
 };
 
