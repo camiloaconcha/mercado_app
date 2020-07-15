@@ -10,7 +10,7 @@ Requeriments
 
 ### Tech
 
-Dillinger uses a number of open source projects to work properly:
+This app uses a number of open source projects to work properly:
 
 * [ReactJS] - HTML enhanced for web apps!
 * [node.js] - evented I/O for the backend
